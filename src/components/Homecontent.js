@@ -1,16 +1,24 @@
 import './Homecontent.css';
 import {Homecontentdata} from './Homecontentdata';
 import { Link } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from 'react';
 
 function Homecontent(){
 
+
+    useEffect(() => {
+      
+      Aos.init({duration:2000})
+    }, []) ;
 
     return(
 
      <>   
      <div className='tex'><h1> <u>Agents</u> </h1></div> 
            
-    <section className='movies'>
+    <section className='movies' data-aos='fade-up'>
     
       {Homecontentdata.map((dat) => {
         
